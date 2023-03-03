@@ -77,6 +77,7 @@ export const SideBar = ({ isSidebarOpen, closeSidebar }: Props) => {
           <div onClick={closeSidebar} className="w-auto h-auto p-0 m-0">
             <CloseIcon />
           </div>
+
           <motion.ul variants={listTransition} className="w-full h-auto py-4">
             <motion.li
               variants={itemVariants}
@@ -86,7 +87,9 @@ export const SideBar = ({ isSidebarOpen, closeSidebar }: Props) => {
             >
               <Link to="/">Home</Link>
             </motion.li>
+
             <motion.li
+              onClick={() => setActiveSection("about")}
               variants={itemVariants}
               className={`h-6 flex items-center py-6 px-4 rounded-lg font-Signika text-bold text-white ${
                 activeSection === "about" ? "bg-blue-600" : ""
@@ -94,6 +97,7 @@ export const SideBar = ({ isSidebarOpen, closeSidebar }: Props) => {
             >
               <Link to="/about">About</Link>
             </motion.li>
+
             <motion.li
               variants={itemVariants}
               className={`h-6 flex items-center py-6 px-4 rounded-lg font-Signika text-bold text-white ${
@@ -102,6 +106,7 @@ export const SideBar = ({ isSidebarOpen, closeSidebar }: Props) => {
             >
               Aprende JS
             </motion.li>
+
             <motion.li
               variants={itemVariants}
               className={`h-6 flex items-center py-6 px-4 rounded-lg font-Signika text-bold text-white ${
