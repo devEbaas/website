@@ -1,20 +1,20 @@
-import { BurguerIcon } from "./BurguerIcon";
-import logo from "./beka-light.png";
+import { BurguerIcon } from './assets/BurguerIcon'
+import logo from '../assets/beka-light.png'
 
 type Props = {
-  handleClick: () => void;
-};
+  handleClick: () => void
+}
 
 export const NavBar = ({ handleClick }: Props) => {
   return (
-    <div className="w-full h-16 bg-blue-600 shadow-lg px-2 flex items-center justify-between">
+    <div className="flex h-16 w-full items-center justify-between bg-blue-600 px-2 shadow-lg">
       <div
-        className="outline-none bg-transparent w-auto h-auto"
+        className="h-auto w-auto bg-transparent outline-none"
         onClick={handleClick}
       >
         <BurguerIcon />
       </div>
-      <img src={logo} alt="logo beka" className="w-20 h-auto object-cover" />
+      <img src={logo} alt="logo beka" className="h-auto w-20 object-cover" />
     </div>
-  );
-};
+  )
+}
